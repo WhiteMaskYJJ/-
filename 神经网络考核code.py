@@ -36,7 +36,7 @@ class NeuralNetwork:
     def train(self, X, y, epochs, learning_rate):
         m = X.shape[0]  # 样本数量
 
-        for i in range(epochs):
+        for i in   在 range(epochs):
             # 前向传播
             Z1 = np.dot(X, self.W1) + self.b1
             A1 = self.sigmoid(Z1)
@@ -151,4 +151,5 @@ if __name__ == "__main__":
     # 保存结果
     timestamp = time.strftime("%Y%m%d_%H%M%S")
     result_file = os.path.join(result_dir, f"nn_results_{timestamp}.csv")
+
     save_results(y_test, predictions, result_file)
